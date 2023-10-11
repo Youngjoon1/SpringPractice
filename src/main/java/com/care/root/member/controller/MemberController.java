@@ -1,24 +1,21 @@
 package com.care.root.member.controller;
 
 import com.care.root.member.dto.MemberDTO;
-import com.care.root.member.service.MemberService;
+import com.care.root.member.service.MemberServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.io.PrintWriter;
 
 @Controller
 @RequestMapping("member")
 public class MemberController {
     @Autowired
-    MemberService ms;
-
+    MemberServiceImpl ms;
 
     @GetMapping("login")
     public String login() {

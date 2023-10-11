@@ -4,6 +4,8 @@
     <head>
         <title>회원가입</title>
         <link href="/root_war_exploded/resources/member/css/joinForm.css" rel="stylesheet">
+        <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+        <script type="text/javascript" src="/root_war_exploded/resources/member/js/joinForm.js"></script>
     </head>
     <body>
         <c:import url="../default/header.jsp" />
@@ -13,6 +15,7 @@
                         <tr>
                             <th>아이디 : </th>
                             <td><input type="text" name="id"></td>
+                            <td><button type="button">중복체크</button></td>
                         </tr>
 
                         <tr>
@@ -32,19 +35,21 @@
 
                         <tr>
                             <th>지번 주소 : </th>
-                            <td><input type=w"text" name="numberAddr"></td>
+                            <td><input type=w"text" id="addr1" name="numberAddr" readonly></td>
                         </tr>
                         <tr>
                             <th>도로명 주소 : </th>
-                            <td><input type=w"text" name="roadAddr"></td>
+                            <td><input type=w"text" id="addr2" name="roadAddr" readonly></td>
                         </tr>
                         <tr>
                             <th>상세주소 : </th>
-                            <td><input type=w"text" name="detailAddr"></td>
+                            <td><input type=w"text" id="addr3" name="detailAddr"></td>
+                            <td><button type="button" onclick="daumPost()">주소 검색</button></td>
                         </tr>
                         <tr>
                             <th>이메일 : </th>
                             <td><input type="email" name="email"></td>
+                            <td><button type="button">이메일 인증</button></td>
                         </tr>
                         <tr>
                             <th colspan="2">
