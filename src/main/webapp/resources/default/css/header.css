@@ -1,0 +1,7 @@
+#logoName {font-size: 30pt; text-decoration: none; color: black;}
+#menu > ul {list-style-type: none;}
+#menu > ul > li {display: inline}
+#submenu > ul > li {list-style-type: none}
+#memberMenu {margin-left: 80%;}
+
+#mainMenu {display: none;}
