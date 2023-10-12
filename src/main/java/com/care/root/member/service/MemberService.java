@@ -7,5 +7,6 @@ import org.springframework.stereotype.Service;
 public interface MemberService {
     String getMessage(String Msg,String Url);
     String join(MemberDTO dto);
+    void emailCK(String Email);
 
 }

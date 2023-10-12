@@ -18,3 +18,8 @@ function daumPost() {
         }
     }).open();
 }
+
+function emailCK() {
+    const useremail = document.getElementById("EMAIL");
+    window.open("/root/member/emailCK?email="+useremail.value,"pop","width=420,height=500,left=200,top=200");
+}

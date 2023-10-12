@@ -3,9 +3,9 @@
 <html>
     <head>
         <title>회원가입</title>
-        <link href="/root_war_exploded/resources/member/css/joinForm.css" rel="stylesheet">
+        <link href="/root/resources/member/css/joinForm.css" rel="stylesheet">
         <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-        <script type="text/javascript" src="/root_war_exploded/resources/member/js/joinForm.js"></script>
+        <script type="text/javascript" src="/root/resources/member/js/joinForm.js"></script>
     </head>
     <body>
         <c:import url="../default/header.jsp" />
@@ -48,14 +48,16 @@
                         </tr>
                         <tr>
                             <th>이메일 : </th>
-                            <td><input type="email" name="email"></td>
-                            <td><button type="button">이메일 인증</button></td>
+                            <td><input type="email" name="email" id="EMAIL"></td>
+                            <td><button type="button" onclick="emailCK()">이메일 인증</button></td>
                         </tr>
+
                         <tr>
                             <th colspan="2">
                                 <input type="submit" value="가입하기">
                             </th>
                         </tr>
+
                     </table>
 
                 </form>
