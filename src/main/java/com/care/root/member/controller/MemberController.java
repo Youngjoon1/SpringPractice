@@ -1,5 +1,6 @@
 package com.care.root.member.controller;
 
+import com.care.root.email.controller.EmailController;
 import com.care.root.member.dto.MemberDTO;
 import com.care.root.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,10 @@ import java.io.PrintWriter;
 
 @Controller
 public class MemberController {
-    @Autowired MemberService ms;
+    @Autowired
+    MemberService ms;
+    @Autowired
+    EmailController emailCon;
 
     @GetMapping("member/login")
     public String login() {
@@ -35,21 +39,9 @@ public class MemberController {
 
     @GetMapping("member/emailCK")
     public String emailCK(@RequestParam String email, Model model) {
-        String title = "TEST MALL 인증메일입니다";
-        String body = "인증코드가 들어갈 자리";
-        ms.emailSend(email,title,body);
+        emailCon.sendMail(email);
         model.addAttribute("ckEmail",email);
         return "member/emailCK";
     }
 
-    @GetMapping("member/emailTestForm")
-    public String emailTestForm() {
-        return "member/emailTestForm";
-    }
-
-    @GetMapping("member/send")
-    public String send(@RequestParam String testEmail) {
-        ms.testSend(testEmail);
-        return "redirect:/";
-    }
 }
