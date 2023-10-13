@@ -2,7 +2,6 @@ package com.care.root.email.controller;
 
 import com.care.root.email.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Controller;
 
 @Controller

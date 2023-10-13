@@ -4,16 +4,15 @@ import com.care.root.member.dto.MemberDTO;
 import com.care.root.mybatis.member.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import javax.mail.internet.MimeMessage;
+
 
 @Service
 public class MemberServiceImpl implements MemberService{
     @Autowired MemberMapper mapper;
     BCryptPasswordEncoder passwordEncoder;
-    JavaMailSender emailSender;
+
 
     public String getMessage(String Msg,String Url) {
         String Message = "<script>alert('"+Msg+"');";
