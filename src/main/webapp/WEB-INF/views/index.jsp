@@ -7,6 +7,7 @@
 <body>
     <c:import url="default/header.jsp" />
     <h1>index</h1>
+    <a href="/root/member/emailTestForm">testEmail</a>
     <c:import url="default/footer.jsp" />
 
 </body>
