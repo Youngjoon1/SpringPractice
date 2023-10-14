@@ -2,7 +2,8 @@
 <%@taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
 <html>
 <head>
-    <title>Title</title>
+    <title>인증사이트</title>
+    <script src="/root/resource"> </script>
 </head>
 <body>
     <h1>이메일 인증</h1>

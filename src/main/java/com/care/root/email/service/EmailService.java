@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-
 import javax.mail.internet.MimeMessage;
+
+
 
 @Service
 public class EmailService {
     @Autowired
     JavaMailSender mailSender;
-
     public void send(String email, String title,String body) {
         MimeMessage msg = mailSender.createMimeMessage();
 
