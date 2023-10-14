@@ -16,9 +16,6 @@ import java.io.PrintWriter;
 public class MemberController {
     @Autowired
     MemberService ms;
-    @Autowired
-    EmailController emailCon;
-
     @GetMapping("member/login")
     public String login() {
         return "member/login";
@@ -36,11 +33,9 @@ public class MemberController {
         PrintWriter out = res.getWriter();
         out.print(msg);
     }
-
     @GetMapping("member/emailCK")
-    public String emailCK(@RequestParam String email, Model model) {
-        emailCon.sendMail(email);
-        model.addAttribute("ckEmail",email);
+    public String emailCK(@RequestParam String email,Model model) {
+        model.addAttribute("userMail",email);
         return "member/emailCK";
     }
 

@@ -12,12 +12,12 @@ import javax.mail.internet.MimeMessage;
 public class EmailService {
     @Autowired
     JavaMailSender mailSender;
-    public void send(String email, String title,String body) {
+    public void send(String userMail, String title,String body) {
         MimeMessage msg = mailSender.createMimeMessage();
 
         try {
             MimeMessageHelper mailHelper = new MimeMessageHelper(msg,true,"utf-8");
-            mailHelper.setTo(email);
+            mailHelper.setTo(userMail);
             mailHelper.setSubject(title);
             mailHelper.setText(body);
             

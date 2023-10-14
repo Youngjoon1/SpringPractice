@@ -49,7 +49,7 @@
                         <tr>
                             <th>이메일 : </th>
                             <td><input type="email" name="email" id="EMAIL"></td>
-                            <td><button type="button" onclick="emailCK()">이메일 인증</button></td>
+                            <td><button type="button" onclick="emailCK()">이메일 등록</button></td>
                         </tr>
 
                         <tr>
