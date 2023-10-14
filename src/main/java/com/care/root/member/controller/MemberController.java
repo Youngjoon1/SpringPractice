@@ -1,6 +1,5 @@
 package com.care.root.member.controller;
 
-import com.care.root.email.controller.EmailController;
 import com.care.root.member.dto.MemberDTO;
 import com.care.root.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
