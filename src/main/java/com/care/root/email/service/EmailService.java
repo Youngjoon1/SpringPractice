@@ -19,13 +19,12 @@ public class EmailService {
             MimeMessageHelper mailHelper = new MimeMessageHelper(msg,true,"utf-8");
             mailHelper.setTo(userMail);
             mailHelper.setSubject(title);
-            mailHelper.setText(body);
+            mailHelper.setText(body,true);
             
         }catch (Exception e) {
             e.printStackTrace();
         }
 
         mailSender.send(msg);
-
     }
 }

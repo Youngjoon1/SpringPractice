@@ -4,6 +4,7 @@
     <head>
         <title>회원가입</title>
         <link href="/root/resources/member/css/joinForm.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
         <script type="text/javascript" src="/root/resources/member/js/joinForm.js"></script>
     </head>

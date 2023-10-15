@@ -3,9 +3,9 @@
 <html>
     <head>
         <title>인증사이트</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script type="text/javascript" src="/root/resources/member/js/emailCK.js"></script>
         <link href="/root/resources/member/css/emailCK.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     </head>
     <body>
         <h1>이메일 인증</h1>
@@ -18,11 +18,9 @@
         <p>인증코드입력</p>
         <input type="text" id="emailCode"> <b>카운트넣기</b>
         <hr>
-        <button type="button">확인</button>
-        <button type="button">취소</button>
-        <div id="codeView">
+        <button type="button" onclick="checkCode()">확인</button>
+        <button type="button" onclick="window.close()">취소</button>
 
-        </div>
 
     </body>
 </html>
