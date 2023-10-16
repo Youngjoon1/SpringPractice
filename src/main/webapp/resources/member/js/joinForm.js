@@ -18,21 +18,21 @@ function daumPost() {
         }
     }).open();
 }
-
 function emailCK() {
     const useremail = document.getElementById("EMAIL");
-    console.log(useremail.value);
     if(!(useremail.value === "")) {
-        document.getElementById("EMAIL").readOnly=true;
         window.open("/root/member/emailCK?email="+useremail.value,"pop","width=700,height=700,left=200,top=200");
     }else {
         alert("이메일을 입력해주세요!!!");
     }
+}
+function inputEmail (email) {
+    document.getElementById("EMAIL").value = email;
+    document.getElementById("EMAIL").readOnly=true;
+}
 
-}
-function changeRead() {
-    document.getElementById("EMAIL").readOnly=false;
-}
+
+
 
 
 
