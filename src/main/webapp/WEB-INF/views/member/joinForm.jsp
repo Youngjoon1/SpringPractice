@@ -36,20 +36,20 @@
 
                         <tr>
                             <th>지번 주소 : </th>
-                            <td><input type=w"text" id="addr1" name="numberAddr" readonly></td>
+                            <td><input type="text" id="addr1" name="numberAddr" readonly></td>
                         </tr>
                         <tr>
                             <th>도로명 주소 : </th>
-                            <td><input type=w"text" id="addr2" name="roadAddr" readonly></td>
+                            <td><input type="text" id="addr2" name="roadAddr" readonly></td>
                         </tr>
                         <tr>
                             <th>상세주소 : </th>
-                            <td><input type=w"text" id="addr3" name="detailAddr"></td>
+                            <td><input type="text" id="addr3" name="detailAddr"></td>
                             <td><button type="button" onclick="daumPost()">주소 검색</button></td>
                         </tr>
                         <tr>
                             <th>이메일 : </th>
-                            <td><input type="email" name="email" id="EMAIL"></td>
+                            <td><input type="text" name="email" id="EMAIL"></td>
                             <td><button type="button" onclick="emailCK()">이메일 등록</button></td>
                         </tr>
 

@@ -17,10 +17,9 @@
         <hr>
         <p>인증코드입력</p>
         <input type="text" id="emailCode"> <b>카운트넣기</b>
+        <input type="hidden" id="CODE">
         <hr>
         <button type="button" onclick="checkCode()">확인</button>
-        <button type="button" onclick="window.close()">취소</button>
-
-
+        <button type="button" onclick="cancel()">취소</button>
     </body>
 </html>

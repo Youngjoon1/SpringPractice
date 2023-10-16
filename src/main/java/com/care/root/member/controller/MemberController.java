@@ -37,5 +37,4 @@ public class MemberController {
         model.addAttribute("userMail",email);
         return "member/emailCK";
     }
-
 }
