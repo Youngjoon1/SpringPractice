@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 public class MemberServiceImpl implements MemberService{
     @Autowired MemberMapper mapper;
     BCryptPasswordEncoder passwordEncoder;
-    JavaMailSender emailSender;
+    JavaMailSender mailSender;
 
     public String getMessage(String Msg,String Url) {
         String Message = "<script>alert('"+Msg+"');";
@@ -44,12 +44,12 @@ public class MemberServiceImpl implements MemberService{
     public void emailSend(String Email,String title,String body) {
 
         try {
-            MimeMessage msg = emailSender.createMimeMessage();
+            MimeMessage msg = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(msg,true,"UTF-8");
             helper.setTo(Email);
             helper.setSubject(title);
             helper.setText(body);
-            emailSender.send(msg);
+            mailSender.send(msg);
         }catch (Exception e){
             e.printStackTrace();
         }
