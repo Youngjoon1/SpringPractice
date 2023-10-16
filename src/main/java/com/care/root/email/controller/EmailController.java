@@ -15,7 +15,7 @@ public class EmailController {
     @Autowired
     EmailService es;
     @GetMapping("member/sendMail")
-    public void sendMail(@RequestParam String userMail, HttpServletResponse res) {
+    public void sendMail(@RequestParam String userMail, HttpServletResponse res,HttpSession timer) {
         String body="<h3>TESTMALL이메일 인증 서비스 입니다</h3><p>회원의 인증 번호 : ";
         String code = "";
         Random ran = new Random();

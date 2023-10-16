@@ -16,6 +16,7 @@ function checkCode() {
     const inputCode = document.getElementById("emailCode");
     const code = document.getElementById("CODE");
     const email = document.getElementById("email");
+    codeTimer();
     if (!(inputCode.value === "")) {
         if (code.value === inputCode.value) {
             alert("인증성공");
@@ -28,9 +29,13 @@ function checkCode() {
         alert("인증코드를 입력해주세요");
     }
 }
-
 function cancel() {
     window.close();
+}
+
+function codeTimer() {
+    var now = new Date();
+
 }
 
 
