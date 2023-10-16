@@ -13,8 +13,8 @@ import java.io.PrintWriter;
 
 @Controller
 public class MemberController {
-    @Autowired MemberService ms;
-
+    @Autowired
+    MemberService ms;
     @GetMapping("member/login")
     public String login() {
         return "member/login";
@@ -32,24 +32,10 @@ public class MemberController {
         PrintWriter out = res.getWriter();
         out.print(msg);
     }
-
     @GetMapping("member/emailCK")
-    public String emailCK(@RequestParam String email, Model model) {
-        String title = "TEST MALL 인증메일입니다";
-        String body = "인증코드가 들어갈 자리";
-        ms.emailSend(email,title,body);
-        model.addAttribute("ckEmail",email);
+    public String emailCK(@RequestParam String email,Model model) {
+        model.addAttribute("userMail",email);
         return "member/emailCK";
     }
 
-    @GetMapping("member/emailTestForm")
-    public String emailTestForm() {
-        return "member/emailTestForm";
-    }
-
-    @GetMapping("member/send")
-    public String send(@RequestParam String testEmail) {
-        ms.testSend(testEmail);
-        return "redirect:/";
-    }
 }

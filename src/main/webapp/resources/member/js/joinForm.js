@@ -21,5 +21,5 @@ function daumPost() {
 
 function emailCK() {
     const useremail = document.getElementById("EMAIL");
-    window.open("/root/member/emailCK?email="+useremail.value,"pop","width=420,height=500,left=200,top=200");
+    window.open("/root/member/emailCK?email="+useremail.value,"pop","width=700,height=700,left=200,top=200");
 }
