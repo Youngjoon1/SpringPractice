@@ -6,7 +6,7 @@ function codeSend() {
         success : (data) => {
             $("#CODE").val(data);
             },
-        error : (data) => {
+        error : () => {
             alert("문제발생");
         }
     });
