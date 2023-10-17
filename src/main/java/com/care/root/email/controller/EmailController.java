@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
 
@@ -15,7 +14,7 @@ public class EmailController {
     @Autowired
     EmailService es;
     @GetMapping("member/sendMail")
-    public void sendMail(@RequestParam String userMail, HttpServletResponse res,HttpSession timer) {
+    public void sendMail(@RequestParam String userMail, HttpServletResponse res) {
         String body="<h3>TESTMALL이메일 인증 서비스 입니다</h3><p>회원의 인증 번호 : ";
         String code = "";
         Random ran = new Random();

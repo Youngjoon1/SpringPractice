@@ -5,10 +5,6 @@ import com.care.root.mybatis.member.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.sql.SQLException;
-
-
 @Service
 public class MemberServiceImpl implements MemberService{
     @Autowired MemberMapper mapper;
