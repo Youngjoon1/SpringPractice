@@ -10,7 +10,6 @@ public class MemberServiceImpl implements MemberService{
     @Autowired MemberMapper mapper;
     BCryptPasswordEncoder passwordEncoder;
 
-
     public String getMessage(String Msg,String Url) {
         String Message = "<script>alert('"+Msg+"');";
         Message += "location.href='"+Url+"'</script>";
@@ -41,6 +40,17 @@ public class MemberServiceImpl implements MemberService{
         try {
             if(mapper.idCK(id)!=null) {
                result = 1;
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public int emailCheck(String email) {
+        int result = 0;
+        try {
+            if(mapper.joinEmail(email)!=null) {
+                result = 1;
             }
         }catch (Exception e) {
             e.printStackTrace();

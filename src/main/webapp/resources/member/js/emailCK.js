@@ -14,14 +14,15 @@ function codeSend() {
     });
 }
 function checkCode() {
-    const inputCode = document.getElementById("emailCode");
-    const code = document.getElementById("CODE");
-    const email = document.getElementById("email");
+    const inputCode = document.getElementById("emailCode").value;
+    const code = document.getElementById("CODE").value;
+    const email = document.getElementById("email").value;
     codeTimer();
-    if (!(inputCode.value === "")) {
-        if (code.value === inputCode.value) {
+    if (!(inputCode === "")) {
+        if (code === inputCode) {
             alert("인증성공");
-            opener.parent.inputEmail(email.value);
+            localStorage.setItem("successEmail",email);
+            opener.parent.inputEmail(email);
             window.close();
         } else {
             alert("일치하는 인증코드를 입력해주세요");

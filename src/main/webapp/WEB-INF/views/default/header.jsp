@@ -1,12 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
         <title>Title</title>
-        <link href="/root/resources/default/css/header.css" rel="stylesheet">
+        <link href="<c:url value="/resources/default/css/header.css"/>" rel="stylesheet">
     </head>
     <body>
-        <a id="logoName" href="/root"><b>TEST</b> MALL</a>
+        <a id="logoName" href="<c:url value="/"/>"><b>TEST</b> MALL</a>
         <div>
             <div>
                 <a>남성</a> &nbsp <a>여성</a> &nbsp <a>키즈</a> &nbsp <a>잡화</a> &nbsp <a>아울렛</a> &nbsp <a>라이프</a>

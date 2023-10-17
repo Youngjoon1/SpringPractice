@@ -23,5 +23,9 @@
     <select id="idCK" resultMap="member">
         SELECT * FROM member WHERE id = #{id}
     </select>
+    
+    <select id="joinEmail" resultMap="member">
+        SELECT * FROM member WHERE email = #{email}
+    </select>
 
 </mapper>

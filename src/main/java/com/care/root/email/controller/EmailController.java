@@ -1,6 +1,7 @@
 package com.care.root.email.controller;
 
 import com.care.root.email.service.EmailService;
+import com.care.root.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +34,5 @@ public class EmailController {
             e.printStackTrace();
         }
         es.send(userMail,title,body);
-
     }
 }

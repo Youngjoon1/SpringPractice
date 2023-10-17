@@ -16,14 +16,23 @@ public class MamerberRepController {
     @Autowired
     MemberService ms;
     @GetMapping("member/idCK")
-    public void idCK(@RequestParam String userId, HttpServletResponse res, HttpSession session) throws IOException {
-        System.out.println(userId);
+    public void idCK(@RequestParam String userId, HttpServletResponse res) throws IOException {
         int result = ms.idCK(userId);
-        if(result == 1) {
-            session.setAttribute("passId",userId);
-        }else {
-            session.removeAttribute("passId");
+
+        try {
+            res.setContentType("text/plain");
+            res.setCharacterEncoding("UTF-8");
+            PrintWriter writer = res.getWriter();
+            writer.print(result);
+            writer.close();
+        }catch (Exception e) {
+            e.printStackTrace();
         }
+    }
+    @GetMapping("member/emailList")
+    public void emailList(@RequestParam String email,HttpServletResponse res) {
+        int result = ms.emailCheck(email);
+
         try {
             res.setContentType("text/plain");
             res.setCharacterEncoding("UTF-8");

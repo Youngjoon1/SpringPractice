@@ -10,9 +10,9 @@
     </head>
     <body>
         <c:import url="../default/header.jsp" />
-            <div id="loginForm">
-                <form action="join" method="post" onsubmit="return joinButton()">
-                    <table id="loginTable">
+            <div id="joinFormContainer">
+                <form action="join" method="post" onsubmit="return joinButton()" id="joinForm">
+                    <table id="joinTable">
                         <tr>
                             <th>아이디 : </th>
                             <td><input type="text" name="id" id="idInput" onfocusout="outId()"></td>
@@ -21,17 +21,17 @@
 
                         <tr>
                             <th>비밀번호 : </th>
-                            <td><input type="password" name="pwd"></td>
+                            <td><input type="password" name="pwd" id="pwdInput"></td>
                         </tr>
 
                         <tr>
                             <th>이름 : </th>
-                            <td><input type="text" name="name"></td>
+                            <td><input type="text" name="name" id="nameInput"></td>
                         </tr>
 
                         <tr>
                             <th>전화 번호 : </th>
-                            <td><input type="tel" name="tel"></td>
+                            <td><input type="tel" name="tel" id="telInput"></td>
                         </tr>
 
                         <tr>

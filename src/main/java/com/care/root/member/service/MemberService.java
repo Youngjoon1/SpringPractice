@@ -5,5 +5,5 @@ public interface MemberService {
     String getMessage(String Msg,String Url);
     String join(MemberDTO dto);
     int idCK(String id);
-
+    int emailCheck(String email);
 }
