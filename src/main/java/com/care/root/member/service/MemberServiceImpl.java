@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLException;
+
 
 @Service
 public class MemberServiceImpl implements MemberService{
@@ -38,7 +40,15 @@ public class MemberServiceImpl implements MemberService{
         }
         return getMessage(msg,url);
     }
-
-
-
+    public int idCK(String id) {
+        int result = 0;
+        try {
+            if(mapper.idCK(id)!=null) {
+               result = 1;
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

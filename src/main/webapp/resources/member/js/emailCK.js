@@ -1,5 +1,7 @@
 function codeSend() {
     const userMail = document.getElementById("email");
+    setInterval(codeTimer,1000);
+    $("#countLabel").show();
     $.ajax({
         url : "sendMail/?userMail="+userMail.value,
         type : "get", dataType : "text",
@@ -10,7 +12,6 @@ function codeSend() {
             alert("문제발생");
         }
     });
-
 }
 function checkCode() {
     const inputCode = document.getElementById("emailCode");
@@ -33,9 +34,19 @@ function cancel() {
     window.close();
 }
 
+let time = 60;
 function codeTimer() {
-    var now = new Date();
+    if(time <= 0) {
+        alert("인증시간이 만료되었습니다.");
+        window.close();
+    }else {
+        time--;
+        document.getElementById("count").innerHTML = time;
+    }
+}
 
+window.onload = function () {
+    $("#countLabel").hide();
 }
 
 

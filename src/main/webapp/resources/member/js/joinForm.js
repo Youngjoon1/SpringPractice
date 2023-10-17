@@ -30,8 +30,32 @@ function inputEmail (email) {
     document.getElementById("EMAIL").value = email;
     document.getElementById("EMAIL").readOnly=true;
 }
+function outId() {
+    const userId = document.getElementById("idInput").value;
+    $.ajax({
+        url: "idCK/?userId="+userId,
+        type: "get",
+        dataType: "text",
+        success : (data) => {
+            console.log(data);
+            if(data == 0) {
+                document.getElementById("idCK").innerHTML = "사용가능한 아이디입니다.";
+            }else {
+                document.getElementById("idCK").innerHTML = "중복된 아이디입니다.";
+            }
 
+        },error : () => {
+            alert("실패!!!");
+        }
+    });
+}
+function joinButton() {
+    return false;
+}
 
+function test() {
+    alert("test버튼");
+}
 
 
 

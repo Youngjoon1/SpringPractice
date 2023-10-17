@@ -27,9 +27,8 @@ public class EmailController {
         try {
             res.setContentType("text/plain");
             res.setCharacterEncoding("UTF-8");
-            String checkCode = code;
             PrintWriter writer = res.getWriter();
-            writer.print(checkCode);
+            writer.print(code);
             writer.close();
         }catch (Exception e) {
             e.printStackTrace();
