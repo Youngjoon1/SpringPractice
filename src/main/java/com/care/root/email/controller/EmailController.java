@@ -1,12 +1,9 @@
 package com.care.root.email.controller;
 
 import com.care.root.email.service.EmailService;
-import com.care.root.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.util.Random;
 
