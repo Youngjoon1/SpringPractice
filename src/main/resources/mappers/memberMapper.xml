@@ -28,4 +28,8 @@
         SELECT * FROM member WHERE email = #{email}
     </select>
 
+    <select id="getUser" resultMap="member">
+        SELECT * FROM member WHERE id = #{id}
+    </select>
+
 </mapper>

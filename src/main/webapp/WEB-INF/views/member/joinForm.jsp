@@ -55,7 +55,6 @@
 
                         <tr>
                             <th colspan="2">
-                                <button type="button" onclick="test()">test</button>
                                 <input type="submit" value="가입하기">
                             </th>
                         </tr>

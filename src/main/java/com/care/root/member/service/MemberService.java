@@ -6,4 +6,5 @@ public interface MemberService {
     String join(MemberDTO dto);
     int idCK(String id);
     int emailCheck(String email);
+    String login(String id, String pwd);
 }

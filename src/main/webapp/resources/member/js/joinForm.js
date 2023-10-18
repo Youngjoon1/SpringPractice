@@ -106,11 +106,7 @@ function joinButton() {
     }
 }
 
-function test() {
-    const session = localStorage.getItem("successEmail");
-    console.log(session);
 
-}
 
 
 

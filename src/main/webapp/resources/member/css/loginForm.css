@@ -1,0 +1,22 @@
+#loginFormContainer {
+    margin-left: 30%;
+}
+#loginTable {
+    border-spacing: 0 50px;
+    border-bottom: solid 1px rgb(128, 128, 128);
+    border-top: solid 1px rgb(128, 128, 128);
+    padding-right: 100px;
+
+}
+#idInput {
+    width: 300px;
+    height: 40px;
+}
+#pwdInput {
+    width: 300px;
+    height: 40px;
+}
+#loginSubmit {
+    width: 100px;
+    height: 50px;
+}

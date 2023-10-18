@@ -28,7 +28,7 @@ public class MemberServiceImpl implements MemberService{
         String url;
         if(result == 1) {
             msg = "가입을축하드립니다";
-            url = "/root/member/login";
+            url = "/root/member/loginForm";
         }else {
             msg = "가입실패";
             url = "/root/";
@@ -56,5 +56,26 @@ public class MemberServiceImpl implements MemberService{
             e.printStackTrace();
         }
         return result;
+    }
+    public String login(String id,String pwd) {
+        MemberDTO dto = mapper.getUser(id);
+        String msg = "",url = "";
+        try {
+            if(mapper.getUser(id) != null) {
+                if(passwordEncoder.matches(pwd,dto.getPwd())){
+                    msg="환영합니다";
+                    url="/root/member/userLogin/?id="+id;
+                }else {
+                    msg="비밀번호가 틀렸습니다";
+                    url = "/root/member/loginForm";
+                }
+            }else {
+                msg = "존재하지 않는 아이디입니다.";
+                url = "/root/member/loginForm";
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return getMessage(msg,url);
     }
 }

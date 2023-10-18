@@ -12,7 +12,7 @@
                 <a>남성</a> &nbsp <a>여성</a> &nbsp <a>키즈</a> &nbsp <a>잡화</a> &nbsp <a>아울렛</a> &nbsp <a>라이프</a>
             </div>
             <div id="memberMenu">
-                <a href="/root/member/login">로그인</a> &nbsp <a href="/root/member/joinForm">회원가입</a> &nbsp <a>검색</a> &nbsp <a>장바구니</a>
+                <a href="/root/member/loginForm">로그인</a> &nbsp <a href="/root/member/joinForm">회원가입</a> &nbsp <a>검색</a> &nbsp <a>장바구니</a>
             </div>
         </div>
 
